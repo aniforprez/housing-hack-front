@@ -13,7 +13,7 @@
 				<h2 flex="20">
 					<span>Housing Demo App</span> 
 				</h2>
-				<md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" md-items="item in getMatches(searchText)" md-item-text="item.description" md-min-length="3" placeholder="Search for a location" flex>
+				<md-autocomplete md-selected-item="selectedItem" md-selected-item-change="setCenter(selectedItem)" md-search-text="searchText" md-items="item in getMatches(searchText)" md-item-text="item.description" md-min-length="3" placeholder="Search for a location" flex>
 					<span md-highlight-text="searchText" ng-click="locationSelected(item)">{{item.description}}</span>
 				</md-autocomplete>
 				<!-- <md-select placeholder="Select a city" ng-model="selectedCity" flex="18">
@@ -23,7 +23,7 @@
 		</md-toolbar>
 	
 		<div class="mapwrapper">
-			<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+			<ui-gmap-google-map center='map.center' zoom='map.zoom' control="map.control" bounds="map.bounds"></ui-gmap-google-map>
 		</div>
 	</div>
 	
