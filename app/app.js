@@ -1,7 +1,8 @@
 angular
 	.module('HousingApp', ['ngMaterial', 'uiGmapgoogle-maps'])
-	.config(['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
-		GoogleMapApiProvider.configure({
-			v: '3.17'
+	.config(['uiGmapGoogleMapApiProvider', function(uiGmapGoogleMapApiProvider) {
+		uiGmapGoogleMapApiProvider.configure({
+			v: '3.17',
+			libraries: 'places'
 		});
 	}]);

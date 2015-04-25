@@ -6,7 +6,21 @@
 	<link rel="stylesheet" href="lib/angular-material/angular-material.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" ng-cloak>
+	<div class="totalwrapper">
+		<md-toolbar>
+			<div class="md-toolbar-tools">
+				<h2>
+					<span>Housing Demo App</span> 
+				</h2>
+			</div>
+		</md-toolbar>
+	
+		<div class="mapwrapper">
+			<ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+		</div>
+	</div>
+	
 	<!-- Libraries -->
 	<script src="lib/angular/angular.min.js"></script>
 	<script src="lib/angular-animate/angular-animate.min.js"></script>
