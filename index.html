@@ -8,7 +8,7 @@
 </head>
 <body ng-controller="MainCtrl" ng-cloak>
 	<div class="totalwrapper">
-		<md-toolbar>
+		<md-toolbar ng-class="{ filterOn: md-tall }">
 			<div class="md-toolbar-tools" layout="row" layout-margin="20">
 				<h2 flex="20">
 					<span>Housing Demo App</span> 
@@ -19,6 +19,9 @@
 				<!-- <md-select placeholder="Select a city" ng-model="selectedCity" flex="18">
 					<md-option ng-repeat="city in cities" ng-value="city">{{city}}</md-option>
 				</md-select> -->
+			</div>
+			<div class="md-toolbar-tools md-toolbar-tools-bottom" ng-if="filterOn">
+				<md-button class="md-raised" ng-click="findPlaces()">Click Me</md-button>
 			</div>
 		</md-toolbar>
 	
